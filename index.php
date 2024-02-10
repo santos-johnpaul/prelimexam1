@@ -259,9 +259,9 @@ if ($result->num_rows > 0) {
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                echo '<p>School Name: ' . $row['school_name'] . '</p>';
-                echo '<p>Address: ' . $row['address'] . '</p>';
-                echo '<p>Contact Number: ' . $row['contact_number'] . '</p>';
+                echo '<img src="assets/img/tt.png" alt="School Logo" width="30" height="30" style="float: left; margin-right: 10px;"><p>School Name: ' . $row['school_name'] . '</p>';
+                echo '<img src="assets/img/location.png" alt="School Logo" width="30" height="30" style="float: left; margin-right: 10px;"><p>Address: ' . $row['address'] . '</p>';
+                echo '<img src="assets/img/add-contact.png" alt="School Logo" width="30" height="30" style="float: left; margin-right: 10px;"><p>Contact Number: ' . $row['contact_number'] . '</p>';
             } else {
                 echo 'No school profile data available.';
             }
@@ -269,27 +269,7 @@ if ($result->num_rows > 0) {
             $conn->close();
             ?>
         </div>
-         <div class="logo-container">
-    <?php
-    $conn = connectToDatabase();
-    $logoQuery = "SELECT pic FROM logo LIMIT 1"; // Assuming you have only one logo
-    $logoResult = $conn->query($logoQuery);
-
-    if ($logoResult->num_rows > 0) {
-        $logoRow = $logoResult->fetch_assoc();
-        $logoPath = $logoRow['pic'];
-
-        // Display the logo with responsive image class
-        echo '<img src="assets/img/' . $logoPath . '" alt="Logo" class="img-fluid" style="max-width: 6%;">';
-
-    } else {
-        // Display a default logo or handle accordingly
-        echo '<img src="default-logo.png" alt="Default Logo" class="img-fluid" style="max-width: 100%;">';
-    }
-
-    $conn->close();
-    ?>
-</div>
+  
     </footer>
 
 
