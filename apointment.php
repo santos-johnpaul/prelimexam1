@@ -50,6 +50,7 @@ echo $templateContent;
                 <th>Actions</th>
             </tr>
         </thead>
+        
         <tbody>
             <tr>
                 <td><input type="date" name="date" required></td>

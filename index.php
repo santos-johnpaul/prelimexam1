@@ -70,7 +70,7 @@ if ($coverImagesResult->num_rows > 0 || $resultCards->num_rows > 0 || $resultGri
         <div>
             <a href="#">Home</a>
             <a href="#">Contact US</a>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
+            <a href="enrollment.php">Enroll Now</a>
             <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
         </div>
     </nav>
@@ -228,51 +228,10 @@ if ($result->num_rows > 0) {
         </div>
     </div>
 <!-- Enroll Modal -->
-<div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="enrollModalLabel">Enroll Now</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Add your enrollment form here -->
-              
-                <form method="post" action="config/enroll.php">
-                <p><b>I. Create your Student Portal Account</b></p>
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" required><input type="text" name="sformat" value="@student" readonly><br>
 
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" required><br>
-
-                    <label for="email">Email Address</label>
-                    <input type="email" name="email" required><br>
-
-                   
-
-                    <!-- Add more fields as needed -->
-                    <p><b>II. Education</b></p>
-                    <label for="elem">Elementary</label>
-                    <input type="text" name="elem" required><br>
-
-                    <button type="submit" class="btn btn-primary">Enroll</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Other HTML content -->
 
-<nav>
-    <div>
-        <a href="#">Home</a>
-        <a href="#">Contact US</a>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</a>
-        <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-    </div>
-</nav>
 
 <!-- Other HTML content -->
 
