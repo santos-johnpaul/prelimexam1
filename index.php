@@ -1,5 +1,33 @@
 <?php
 require_once 'config/db.php';
+
+// Image Slider section
+$connImageSlider = connectToDatabase();
+$coverImagesQuery = "SELECT picture_path FROM cover";
+$coverImagesResult = $connImageSlider->query($coverImagesQuery);
+
+// Cards section
+$connCards = connectToDatabase();
+$sqlCards = "SELECT image_path, title, caption FROM cards";
+$resultCards = $connCards->query($sqlCards);
+
+// Grid section
+$connGrid = connectToDatabase();
+$sqlGrid = "SELECT * FROM grid_data";
+$resultGrid = $connGrid->query($sqlGrid);
+
+// Check if any section has data
+if ($coverImagesResult->num_rows > 0 || $resultCards->num_rows > 0 || $resultGrid->num_rows > 0) {
+    ?>
+    <!-- Your existing HTML and PHP code for the Image Slider, Cards, and Grid sections -->
+    <!-- ... -->
+
+<?php
+} else {
+    // Display global "Under Construction" message
+    echo '<div class="alert alert-info mt-3">Under Construction</div>';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
