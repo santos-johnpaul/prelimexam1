@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.bundle.js"></script>
     <style>
         .enrollment-container {
             max-width: 5400px;
